@@ -4,6 +4,7 @@ import { getCategories } from "../../redux/actions/categoryActions";
 import { saveProduct } from "../../redux/actions/productActions";
 import ProductDetail from "./ProductDetail";
 
+
 function AddOrUpdateProduct({
   products,
   categories,
@@ -52,7 +53,7 @@ function AddOrUpdateProduct({
   }
 
   return (
-    <ProductDetail
+    <ProductDetail 
       product={product}
       categories={categories}
       onChange={handleChange}

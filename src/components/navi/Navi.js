@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import {
   Collapse,
   Navbar,
@@ -6,11 +6,10 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink
-} from 'reactstrap';
-import CartSummary from '../cart/CartSummary';
-import {Link} from 'react-router-dom'
-
+  NavLink,
+} from "reactstrap";
+import CartSummary from "../cart/CartSummary";
+import { Link } from "react-router-dom";
 
 const Navi = (props) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,13 +18,27 @@ const Navi = (props) => {
 
   return (
     <div>
-      <Navbar color="light" light expand="md">
-        <NavbarBrand><Link to="/">Shopping Power</Link></NavbarBrand>
+      <Navbar className="navbar" expand="md">
+        <NavbarBrand>
+          <Link to="/">Home</Link>
+        </NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="ml-auto" navbar>
             <NavItem>
-              <NavLink><Link to="/saveproduct">Add New Product</Link></NavLink>
+              <NavLink>
+                <Link to="/recipe">Food Recipe</Link>
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink>
+                <Link to="/shopping">Shopping Power</Link>
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink>
+                <Link to="/saveproduct">Add New Product</Link>
+              </NavLink>
             </NavItem>
             <CartSummary />
           </Nav>
@@ -33,6 +46,6 @@ const Navi = (props) => {
       </Navbar>
     </div>
   );
-}
+};
 
 export default Navi;

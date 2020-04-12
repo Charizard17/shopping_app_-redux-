@@ -1,0 +1,20 @@
+.divClass{
+    background: blueviolet;
+}
+
+.categoryList{
+    background: rgb(126, 230, 219);
+    height: 460px;
+}
+
+.productList{
+    background: rgb(189, 224, 238);
+}
+
+.navbar{
+    background: rgb(231, 231, 102);
+}
+
+.main{
+    background: gainsboro;
+}
